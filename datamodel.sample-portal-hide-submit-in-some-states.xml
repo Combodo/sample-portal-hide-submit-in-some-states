@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <module_designs>
+        <module_design id="itop-portal" xsi:type="portal">
+			<forms>
+				<form id="ticket-edit">
+					<twig>
+						<script type="text/javascript" id="ticket-edit-hide-submit" _delta="define">
+							$(document).ready(function(){
+								$('form .form_btn_transitions').each(function(oIndex, oElem){
+									if($(oElem).find('.form_btn_transition:visible').length != 0){
+										$(oElem).closest('.form_buttons').find('.form_btn_regular .form_btn_submit').remove();
+										$(oElem).closest('.modal').find('.form_btn_regular .form_btn_submit').remove();
+									}
+								});
+							});
+						</script>
+					</twig>
+				</form>
+			</forms>
+        </module_design>
+  </module_designs>
+</itop_design>
